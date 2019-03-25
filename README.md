@@ -11,53 +11,53 @@
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=Hotab21# Создание переменной
+$ export GIST_TOKEN=<сохраненный_токен> # Создание переменной
+$ alias edit=<nano|vi|vim|subl> # Создание синонима
 ```
 
 ```ShellSession
-$ mkdir -p ${GITHUB_USERNAME}/workspace
-$ cd ${GITHUB_USERNAME}/workspace
-$ pwd
-$ cd ..
-$ pwd
+$ mkdir -p ${GITHUB_USERNAME}/workspace #Создание папки /Hotab21/workspace
+$ cd ${GITHUB_USERNAME}/workspace #Переход в папку /Hotab21/workspace
+$ pwd # Вывод текущей директории
+$ cd .. #Переход в домашнюю директорию ~$
+$ pwd # Вывод текущей директории
 ```
 
 ```ShellSession
-$ mkdir -p workspace/tasks/
-$ mkdir -p workspace/projects/
-$ mkdir -p workspace/reports/
-$ cd workspace
+$ mkdir -p workspace/tasks/ #Создание папки /tasks/
+$ mkdir -p workspace/projects/ #Создание папки /projects/
+$ mkdir -p workspace/reports/ #Создание папки /reports/ 
+$ cd workspace #Переход в папку /Hotab21/workspace
 ```
 
 ```ShellSession
 # Debian
-$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
-$ tar -xf node-v6.11.5-linux-x64.tar.xz
-$ rm -rf node-v6.11.5-linux-x64.tar.xz
-$ mv node-v6.11.5-linux-x64 node
+$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz #Скачивание архива
+$ tar -xf node-v6.11.5-linux-x64.tar.xz #Распаковка архива
+$ rm -rf node-v6.11.5-linux-x64.tar.xz #Удаление архива
+$ mv node-v6.11.5-linux-x64 node #Переименование 
 ```
 
 ```ShellSession
-$ ls node/bin
-$ echo ${PATH}
-$ export PATH=${PATH}:`pwd`/node/bin
-$ echo ${PATH}
-$ mkdir scripts
-$ cat > scripts/activate<<EOF
+$ ls node/bin #Вывод содержимого
+$ echo ${PATH} # Вывод переменной
+$ export PATH=${PATH}:`pwd`/node/bin # Дописать в PATH папку с node js
+$ echo ${PATH} # Вывод переменной
+$ mkdir scripts #Создание папки /scripts/
+$ cat > scripts/activate<<EOF #Запись указанной строки в файл /FalaleevDanila/workspace/scripts/activate
 export PATH=\${PATH}:`pwd`/node/bin
 EOF
-$ source scripts/activate
+$ source scripts/activate # Выполнить указанный скрипт
 ```
 
 ```ShellSession
-$ npm install -g gistup
-$ ls node/bin
+$ npm install -g gistup # Установка пакета gistup в node js
+$ ls node/bin # Вывод директорий и файлов
 ```
 
 ```ShellSession
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF #Запись указанной строки в файл
 {
   "token": "${GIST_TOKEN}"
 }
